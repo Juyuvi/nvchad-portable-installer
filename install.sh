@@ -33,3 +33,9 @@ fc-cache -f -v
 echo "Downloading and installing NvChad"
 git clone https://github.com/NvChad/starter ~/.config/nvim
 
+echo "Adding executable permissions"
+chmod +x nvim.appimage
+
+echo "Everything's done!"
+./nvim.appimage
+
