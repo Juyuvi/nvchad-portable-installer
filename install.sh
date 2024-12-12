@@ -18,13 +18,13 @@ echo "Downloading NerdFont 'Hack'"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip
 
 
-if !(test -d '$HOME/.fonts/'); then
+if !(test -d $HOME/.fonts/); then
     echo "No ~/.fonts/ directory found. Creating one."
-    mkdir '$HOME/.fonts'
+    mkdir $HOME/.fonts
 fi
 
 echo "Extracting fonts to ~/.fonts"
-tar xf Hack.tar.xz -C '$HOME/.fonts/'
+tar xf Hack.tar.xz -C $HOME/.fonts/
 
 echo "Refreshing fonts cache"
 fc-cache -f -v
