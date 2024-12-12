@@ -16,7 +16,7 @@ echo "Downloading NeoVim..."
 wget 'https://github.com/neovim/neovim/releases/download/v0.10.2/nvim.appimage'
 
 echo "Downloading NerdFont 'Hack'"
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.tar.xz
 
 
 if !(test -d "$HOME/.fonts/"); then
