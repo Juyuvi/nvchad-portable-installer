@@ -4,6 +4,7 @@ if [ $# -eq 0 ]
     then
         echo "This script will save NeoVim's executable at $PWD"
         echo "If this was not the intended path, CTRL + C it and pass the path as an argument."
+        sleep 3
 else
     $INSTALL_DIRECTORY = $1
     cd $INSTALL_DIRECTORY
@@ -20,11 +21,11 @@ wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip
 
 if !(test -d $HOME/.fonts/); then
     echo "No ~/.fonts/ directory found. Creating one."
-    mkdir $HOME/.fonts
+    mkdir "$HOME/.fonts"
 fi
 
 echo "Extracting fonts to ~/.fonts"
-tar xf Hack.tar.xz -C $HOME/.fonts/
+tar xf Hack.tar.xz -C "$HOME/.fonts/"
 
 echo "Refreshing fonts cache"
 fc-cache -f -v
