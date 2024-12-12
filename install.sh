@@ -19,7 +19,7 @@ echo "Downloading NerdFont 'Hack'"
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/Hack.zip
 
 
-if !(test -d $HOME/.fonts/); then
+if !(test -d "$HOME/.fonts/"); then
     echo "No ~/.fonts/ directory found. Creating one."
     mkdir "$HOME/.fonts"
 fi
