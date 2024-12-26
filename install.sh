@@ -26,9 +26,11 @@ fi
 
 echo "Extracting fonts to ~/.fonts"
 tar xf Hack.tar.xz -C "$HOME/.fonts/"
+rm Hack.tar.xz 
 
 echo "Refreshing fonts cache"
 fc-cache -f -v
+
 
 echo "Downloading and installing NvChad"
 git clone https://github.com/NvChad/starter ~/.config/nvim
@@ -37,5 +39,5 @@ echo "Adding executable permissions"
 chmod +x nvim.appimage
 
 echo "Everything's done!"
-./nvim.appimage
+echo "Restart your Terminal Emulator and select the JetBrains Hack font. Then run .$PWD/nvim.appimage"
 
